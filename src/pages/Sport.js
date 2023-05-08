@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
 
-const Germany = () => {
+const Sport = () => {
   const [allNews, setAllNews] = useState([]);
   const view = useSelector((state) => state.view);
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?country=de&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
+      "https://newsapi.org/v2/top-headlines?category=sports&pageSize=50&language=en&pageSize=50&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
     )
       .then((res) => res.json())
       .then((data) => setAllNews(data.articles));
@@ -41,7 +41,7 @@ const articleCount = allNews.length;
     <>
     <PageTitle>
       <h1>
-        <span className="fi fi-de"></span> Deutschland - Top News
+      ⚽️ Top Sport News
       </h1>
     </PageTitle>
       
@@ -55,4 +55,4 @@ const articleCount = allNews.length;
   );
 };
 
-export default Germany;
+export default Sport;

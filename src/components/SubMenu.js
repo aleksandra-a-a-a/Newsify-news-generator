@@ -6,23 +6,23 @@ import styled from 'styled-components'
 
 
 const DropdownLink = styled(Link)`
-background: #202123;
+background: #52796F;
 height: 60px;
-padding-left: 3rem;
+padding-left: 2.5rem;
 display: flex;
 align-items: center;
 text-decoration: none;
-color: #f5f5f5;
-font-size: 18px;
+color: whitesmoke;
+font-size: 15px;
 
 &:hover {
-  background: #343541;
+  background: #ABC4B0;
   cursor: pointer;  
 }
 `
 const SidebarLink = styled(Link)`
 display: flex;
-color: #e1e9fc;
+color: whitesmoke;
 justify-content: space-between;
 align-items: center;
 padding: 20px;
@@ -32,8 +32,8 @@ text-decoration: none;
 font-size: 18px;
 
 &:hover {
-    background: #343541;
-    border-left: 4px solid #D5EB2A;
+    background: #ABC4B0;
+    border-left: 4px solid #F4F6F3;
     cursor: pointer;
 }
 `
@@ -67,7 +67,7 @@ const SubMenu = ({country}) => {
         {subnav && country.subNav.map((country, index) => {
             return (
                 <DropdownLink to={country.path} key={index}>
-                <span class={country.icon}></span>
+                <img src={country.icon}/>
                 <SidebarLabel>{country.title}</SidebarLabel>
                 </DropdownLink>
             )

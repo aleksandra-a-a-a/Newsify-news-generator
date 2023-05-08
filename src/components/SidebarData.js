@@ -5,35 +5,35 @@ import * as BiIcons from 'react-icons/bi'
 const SidebarData = [
     
     {
-        title: 'Country',
+        title: 'Category',
         icon: <BiIcons.BiWorld />,
         iconClosed: <RiIcons.RiArrowUpSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
             {
-                title: 'Poland',
-                path: '/country/poland',
-                icon: 'fi fi-pl'
+                title: 'Entertainment',
+                path: '/category/entertainment',
+                icon: 'https://img.icons8.com/color/48/null/retro-tv.png'
             },
             {
-                title: 'Ukraine',
-                path: '/country/ukraine',
-                icon: 'fi fi-ua'
+                title: 'Technology',
+                path: '/category/technology',
+                icon: 'https://img.icons8.com/color/48/null/electronics.png'
             },
             {
-                title: 'Germany',
-                path: '/country/germany',
-                icon: 'fi fi-de'
+                title: 'Sport',
+                path: '/category/sport',
+                icon: 'https://img.icons8.com/color/48/null/sports.png'
             },
             {
-                title: 'France',
-                path: '/country/france',
-                icon: 'fi fi-fr'
+                title: 'Business',
+                path: '/category/business',
+                icon: 'https://img.icons8.com/color/48/null/banknotes.png'
             },
             {
-                title: 'Italy',
-                path: '/country/italy',
-                icon: 'fi fi-it'
+                title: 'Health',
+                path: '/category/health',
+                icon: 'https://img.icons8.com/color/48/null/welfare.png'
             },
         ]
     },

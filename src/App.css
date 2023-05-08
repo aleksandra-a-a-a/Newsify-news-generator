@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   }
 
   html, body {
     height: 100vh;
-    background: linear-gradient(90deg, #ffffff, #dadada)
+    background: linear-gradient(90deg, #ffffff, #dadada);
+    color: #254441;
   }
 

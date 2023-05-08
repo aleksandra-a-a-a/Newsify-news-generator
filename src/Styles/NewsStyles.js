@@ -115,7 +115,7 @@ const ListBox = styled.div`
 `;
 
 const ReadMore = styled.div`
-  background: #202123;
+  background: whitesmoke;
   width: 35rem;
   height: 40rem;
   content: "";
@@ -126,8 +126,8 @@ const ReadMore = styled.div`
   right: 0;
   margin: auto;
   z-index: 10;
-  color: whitesmoke;
-  border: solid 1px #d5eb2a;
+  color: #254441;
+  border: solid 1px #254441;
   text-align: center;
   border-radius: 10px;
 
@@ -148,7 +148,7 @@ const ReadMore = styled.div`
   .title-pop {
     margin: auto;
     width: 30rem; 
-    color: #d5eb2a;
+    color: #254441;
 
     @media (max-width: 414px) {
       max-width: 18rem;
@@ -170,18 +170,20 @@ const ReadMore = styled.div`
   }
 
   .source-pop {
-    color: #d5eb2a;
+    color: #254441;
+    font-weight: 500;
   }
 
   .author-pop {
-    color: #d5eb2a;
+    color: #254441;
     padding: 2rem;
+    font-weight: bold;
    
   }
 `;
 
 const CloseIcon = styled.div`
-  color: #d5eb2a;
+  color: #254441;
   text-align: right;
   padding: 1rem;
   font-size: 1.4rem;

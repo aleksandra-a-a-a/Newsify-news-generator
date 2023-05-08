@@ -2,16 +2,15 @@ import { useState, useEffect } from "react";
 import News from "../components/News";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Footer from "../components/Footer";
 
-const Poland = () => {
+const Health = () => {
   const [allNews, setAllNews] = useState([]);
   const view = useSelector((state) => state.view);
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?country=pl&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
+      "https://newsapi.org/v2/top-headlines?category=health&language=en&pageSize=50&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
     )
       .then((res) => res.json())
       .then((data) => setAllNews(data.articles));
@@ -25,28 +24,26 @@ const Poland = () => {
   `;
 
   const PageTitle = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin-top: 2rem;
   h1 {
-   @media (max-width: 414px) {
-    font-size: 1.2rem;
-    } 
-  }
-    
-  `;
-
+    @media (max-width: 414px) {
+     font-size: 1.2rem;
+     } 
+`;
   const articleCount = allNews.length;
 
   return (
     <>
-      <PageTitle>
-        <h1>
-          <span className="fi fi-pl"></span> Polska - Top wiadomości
-        </h1>
-      </PageTitle>
+    <PageTitle>
+      <h1>
+      🩺 Top Health News
+      </h1>
+    </PageTitle>
+      
       <NewsBox>
         {allNews.map((article) => (
           <News key={article.url} {...article} view={view} />
@@ -57,4 +54,4 @@ const Poland = () => {
   );
 };
 
-export default Poland;
+export default Health;

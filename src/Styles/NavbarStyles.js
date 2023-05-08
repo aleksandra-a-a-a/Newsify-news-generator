@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Nav = styled.div`
-  background: #202123;
+  background: #52796F;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -9,7 +9,7 @@ const Nav = styled.div`
 `;
 
 const SidebarNav = styled.nav`
-  background: #202123;
+  background: #52796F;
   width: 250px;
   height: 100vh;
   display: flex;

@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
 
-const Italy = () => {
+const Technology = () => {
   const [allNews, setAllNews] = useState([]);
   const view = useSelector((state) => state.view);
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?country=it&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
+      "https://newsapi.org/v2/top-headlines?category=technology&language=en&pageSize=50&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
     )
       .then((res) => res.json())
       .then((data) => setAllNews(data.articles));
@@ -29,18 +29,20 @@ const Italy = () => {
   align-items: center;
   height: 10vh;
   margin-top: 2rem;
+
   h1 {
     @media (max-width: 414px) {
      font-size: 1.2rem;
      } 
 `;
+
   const articleCount = allNews.length;
 
   return (
     <>
     <PageTitle>
       <h1>
-        <span className="fi fi-it"></span> Italia - Le notizie più importanti
+      💻 Top Technology News
       </h1>
     </PageTitle>
       
@@ -54,4 +56,4 @@ const Italy = () => {
   );
 };
 
-export default Italy;
+export default Technology;

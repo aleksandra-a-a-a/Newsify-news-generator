@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer";
 
-const France = () => {
+const Business = () => {
   const [allNews, setAllNews] = useState([]);
   const view = useSelector((state) => state.view);
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?country=fr&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
+      "https://newsapi.org/v2/top-headlines?language=en&category=business&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
     )
       .then((res) => res.json())
       .then((data) => setAllNews(data.articles));
@@ -41,7 +41,7 @@ const France = () => {
     <>
       <PageTitle>
         <h1>
-          <span className="fi fi-fr"></span> France - Actualité à la Une
+        💵 Top Business News
         </h1>
       </PageTitle>
 
@@ -55,4 +55,4 @@ const France = () => {
   );
 };
 
-export default France;
+export default Business;

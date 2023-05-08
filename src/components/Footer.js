@@ -13,7 +13,7 @@ export default function Footer(props) {
     })
 
     const Footer = styled.footer`
-    background-color: #202123;
+    background-color: #52796F;
     color: white;
     position: sticky;
     bottom: 0;
@@ -24,9 +24,10 @@ export default function Footer(props) {
     align-items: center;
 
     p {
-        color: #d5eb2a;
+        color: whitesmoke;
         display: flex;
         align-items: center;
+        font-weight: 500;
 
     .icon {
         margin-right: 0.4rem;

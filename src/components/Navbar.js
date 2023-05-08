@@ -10,7 +10,7 @@ import * as AiIcons from "react-icons/ai";
 import SidebarData from "./SidebarData";
 import Submenu from "./SubMenu";
 import { Nav, SidebarNav, SidebarWrap, NavMenu, ToggleViewButton } from "../Styles/NavbarStyles"
-import NotePop from "./NotePop";
+
 
 const NavIcon = styled(Link)`
   font-size: 2rem;
@@ -18,7 +18,7 @@ const NavIcon = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: #d5eb2a;
+  color: white;
   padding: 1rem;
 
   @media (max-width: 414px) {
@@ -28,14 +28,14 @@ const NavIcon = styled(Link)`
 
 
 const NavTitle = styled(Link)`
-  margin-left: 12rem;
+  margin-left: 9rem;
 
   @media (max-width: 414px) {
     margin-left: 0;
   }
 
    img {
-    width: 6.7rem;
+    width: 14rem;
    }
 `;
 
@@ -62,13 +62,9 @@ function Navbar() {
           <FaIcons.FaBars onClick={showSidebar} />
         </NavIcon>
         <NavTitle to="/Homepage">
-          <img alt='logo' src='/logo-green.png'/>
+          <img alt='logo' src='/logo.webp'/>
         </NavTitle>
         <NavMenu to="#">
-          <button  className="popup-btn" onClick={showNote}>
-            Note from creator
-          </button>
-          {note ? <NotePop/> : null}
           <ToggleViewButton onClick={toggleView}>
             {view === "list" ? (
               <IoIcons.IoMdGrid />

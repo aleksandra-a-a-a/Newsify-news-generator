@@ -13,7 +13,7 @@ const Homepage = () => {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?language=en&pageSize=30&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
+      "https://newsapi.org/v2/top-headlines?language=en&category=general&pageSize=30&apiKey=6292b2daff4b4f4fac66d86a18e86d90"
     )
       .then((res) => res.json())
       .then((data) => {
